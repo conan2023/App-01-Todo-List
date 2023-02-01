@@ -17,7 +17,7 @@ export default function App() {
                 </View>
                 <View style={styles.containerBottomRight}>
                     <View style={styles.containerBottomRightTop}>
-                        <Text style={styles.bottomText}>Right Top</Text>
+                        <Text style={[styles.bottomText, styles.redText]}>Right Top</Text>
                     </View>
                     <View style={styles.containerBottomRightBottom}>
                         <Text style={styles.bottomText}>Right Bottom</Text>
@@ -88,5 +88,8 @@ const styles = StyleSheet.create({
     },
     centerText: {
 
+    },
+    redText: {
+        color: 'red'
     }
 });
