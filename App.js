@@ -1,28 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 
 export default function App() {
     return (
         <View style={styles.container}>
-            <View style={styles.containerTop}>
-                <View style={styles.top}>
-                    <Text style={styles.topText}>Top Left</Text>
+            <View style={styles.body}>
+                <View>
+                    <Text style={styles.header}>Todo List</Text>
                 </View>
+                <ScrollView style={styles.items}>
+                    <TouchableOpacity>
+                        <View style={styles.item}>
+                            <View style={styles.square}>
+                                <Text style={styles.number}>01</Text>
+                            </View>
+                            <Text style={styles.content}>Lau nha</Text>
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <View style={styles.item}>
+                            <View style={styles.square}>
+                                <Text style={styles.number}>01</Text>
+                            </View>
+                            <Text style={styles.content}>Lau nha</Text>
+                        </View>
+                    </TouchableOpacity>
+                </ScrollView>
             </View>
-            <View style={styles.containerBottom}>
-                <View style={styles.containerBottomLeft}>
-                    <View style={styles.bottomLeft}>
-                        <Text style={styles.bottomText}>Bottom Left</Text>
-                    </View>
-                </View>
-                <View style={styles.containerBottomRight}>
-                    <View style={styles.containerBottomRightTop}>
-                        <Text style={[styles.bottomText, styles.redText]}>Right Top</Text>
-                    </View>
-                    <View style={styles.containerBottomRightBottom}>
-                        <Text style={styles.bottomText}>Right Bottom</Text>
-                    </View>
-                </View>
+            <View style={styles.input}>
 
             </View>
         </View>
@@ -31,65 +37,47 @@ export default function App() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#e3fdff',
-        flex: 1
-    },
-    containerTop: {
         flex: 1,
-        backgroundColor: 'yellow',
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: '#eef6f8'
     },
-    containerBottom: {
+    body: {
         flex: 1,
-        backgroundColor: 'green',
-        flexDirection: 'row'
+        paddingTop: 50,
+        paddingHorizontal: 20
     },
-    containerBottomLeft: {
-        flex: 1,
-        backgroundColor: 'green',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    containerBottomRight: {
-        flex: 1,
-        backgroundColor: 'blue',
-    },
-    containerBottomRightTop: {
-        flex: 3,
-        backgroundColor: 'purple',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    containerBottomRightBottom: {
-        flex: 1,
-        backgroundColor: 'blue',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    top: {
-
-    },
-    topText: {
-        fontSize: 20,
-        color: 'blue',
+    header: {
+        fontSize: 30,
+        color: '#58acca',
         fontWeight: 'bold'
     },
-    bottom: {
-
+    items: {
+        marginTop: 15
     },
-    bottomText: {
-        fontSize: 20,
-        color: 'white',
-        fontWeight: 'bold',
+    item: {
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        marginBottom: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
-    center: {
-
+    square: {
+        backgroundColor: '#66cde4',
+        width: 40,
+        height: 40,
+        borderRadius: 100,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    centerText: {
-
+    number: {
+        color: '#eef6f8',
+        fontSize: 15,
+        fontWeight: '500'
     },
-    redText: {
-        color: 'red'
+    content: {
+        width: '80%',
+        fontSize: 15
     }
 });
