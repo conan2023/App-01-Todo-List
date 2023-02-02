@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View, Keyboard } from 'react-native'
+import { KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View, Keyboard, Platform } from 'react-native'
 
 import styles from './styles'
 
