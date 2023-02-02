@@ -13,12 +13,19 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     square: {
-        backgroundColor: colors.second,
         width: 40,
         height: 40,
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    // so chan
+    even: {
+        backgroundColor: colors.primary,
+    },
+    // so le
+    odd: {
+        backgroundColor: colors.second,
     },
     number: {
         color: colors.white,
